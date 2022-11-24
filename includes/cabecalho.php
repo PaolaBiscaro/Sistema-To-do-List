@@ -10,6 +10,8 @@
 
     <!-- Adicionar Icone no Navegador -->
     <link rel="icon" type="image/png" href="assets/img/logo-icon.png" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -20,7 +22,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"> 
-          <img src="assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <img src="/assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         <strong>TodoList</strong>
       </a>
 
