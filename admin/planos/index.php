@@ -1,6 +1,11 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT']. "/controllers/PlanoController.php";
 
+    $planos = index();
+    // echo"<pre>";
+    // print_r($planos);
+    // echo"</pre>";
+
 ?>
 
 <?php include_once CABECALHO; ?>
@@ -19,22 +24,33 @@
 
            <table class="table table-striped mt-5">
                 <thead>
+
+                    
                     <tr>
                         <th>#</th>
                         <th>Titulo</th>
                         <th>Valor</th>
                         <th width="140">Ação</th>
                     </tr>
+
+                   
+
                 </thead>
                 <tbody>
-                    <td>1</td>
-                    <td>Gratuito</td>
-                    <td>R$0.00</td>
+
+                <?php foreach($planos as $plan): ?>
+                    <tr>
+                    <td> <?= $plan['id'] ?> </td>
+                    <td><?= $plan['titulo'] ?> </td>
+                    <td>R$ <?= $plan['valor'] ?> </td>
                     <td>
-                        <a href="/admin/planos/visualizar" class="btn btn-sm btn-light"><i class="fas fa-eye"></i></a>
-                        <a href="/admin/planos/editar" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
-                        <a href="/admin/planos" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="/admin/planos/visualizar?id=<?= $plan['id'] ?> " class="btn btn-sm btn-light"><i class="fas fa-eye"></i></a>
+                        <a href="/admin/planos/editar?id=<?= $plan['id'] ?> " class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                        <a href="/admin/planos/?id=<?= $plan['id'] ?> " class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                     </td>
+                    </tr>
+
+                    <?php endforeach; ?>
                 </tbody>
                
            </table>

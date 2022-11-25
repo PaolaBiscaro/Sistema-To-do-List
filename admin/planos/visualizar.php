@@ -1,6 +1,7 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT']. "/controllers/PlanoController.php";
 
+    $plano = visualizar($_GET['id'])
 ?>
 
 <?php include_once CABECALHO; ?>
@@ -15,21 +16,21 @@
             <table class="table table-striped mt-5">
                 <tr>
                     <th width="180">Titulo</th>
-                    <td>Gratuito</td>
+                    <td><?= $plano['titulo']?></td>
                 </tr>
                 <tr>
                     <th width="180">Valor</th>
-                    <td>R$0.00</td>
+                    <td>R$<?= $plano['valor']?></td>
                 </tr>
                 <tr>
-                    <th width="180">Titulo</th>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                    <th width="180">Descrição</th>
+                    <td><?= $plano['descricao']?> </td>
                 </tr>
             </table>
 
             <div class="row">
                 <div class="col-12">
-                    <a href="/admin/planos/editar" class= "btn btn-primary">Editar</a>
+                    <a href="/admin/planos/editar?id=<?= $plano['id']?>" class= "btn btn-primary">Editar</a>
                     <a href="/admin/planos" class=" btn btn-light">Cancelar</a>
                 </div>
             </div>
