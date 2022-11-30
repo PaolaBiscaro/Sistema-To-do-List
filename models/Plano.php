@@ -78,3 +78,20 @@ function editarPlano($plano, $id){
         return false;
     }
 }
+
+function deletarPlano($id){
+    $db = conexao();
+    $sql = "DELETE FROM planos WHERE id=:id";
+
+    try{
+        $stmt = $db -> prepare($sql);
+        $stmt ->bindParam(":id", $id, PDO::PARAM_INT);
+        $stmt -> execute();
+        return true;
+
+    }catch(PDOException $e){
+        die ($e-> getMessage());
+        return false;
+    }
+
+}
