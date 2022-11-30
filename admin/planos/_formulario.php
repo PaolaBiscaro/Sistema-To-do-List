@@ -1,16 +1,16 @@
 <div class="col-12 col-md-8">
     <label class="form-label" for="titulo">Titulo</label>
-    <input type="text" name="titulo" class="form-control" id="titulo">
+    <input type="text" name="titulo" class="form-control" id="titulo" value="<?= $plano['titulo']?? '' ?>">
 </div>
 
 <div class="col-12 col-md-4">
     <label class="form-label" for="valor">Valor</label>
-    <input type="text" name="valor" class="form-control" id="valor">
+    <input type="text" name="valor" class="form-control" id="valor" value="<?= $plano['valor']?? '' ?>">
 </div>
 
 <div class="col-12">
     <label class="form-label" for="descricao">Descrição</label>
-    <textarea name="descricao" class="form-control" id="descricao"></textarea>
+    <textarea name="descricao" class="form-control" id="descricao" ><?= $plano['descricao']?? '' ?></textarea>
 
 </div>
 

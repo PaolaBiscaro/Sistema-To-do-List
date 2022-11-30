@@ -1,5 +1,6 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT']. "/controllers/PlanoController.php";
+    $plano = cadastrar();
 
 ?>
 
