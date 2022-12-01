@@ -26,7 +26,7 @@ function buscarPlano($id){
         $stmt = $db -> prepare($sql);
         $stmt -> bindParam(':id', $id, PDO::PARAM_INT); // adiciona segurança
         $stmt -> execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt -> fetch(PDO::FETCH_ASSOC);
 
     }catch(PDOException $e){
         die($e -> getMessage());

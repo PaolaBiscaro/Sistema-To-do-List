@@ -1,7 +1,7 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT']. "/controllers/PlanoController.php";
 
-    $plano = visualizar($_GET['id'])
+    $plano = visualizar($_GET['id']);
 ?>
 
 <?php include_once CABECALHO; ?>
