@@ -1,7 +1,8 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/helpers/Config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controllers/LoginController.php';
 
+$login = validarLogin();
 ?>
 
 <?php include_once CABECALHO; ?>
@@ -17,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/helpers/Config.php';
                     Usuário ou senha inválido!
                 </div>
 
-                <form action="#" method="post" class="row g-3">
+                <form action="/login/index" method="post" class="row g-3">
                     <div class="col-12">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" value="" class="form-control" placeholder="Digite seu E-mail" autofocus>

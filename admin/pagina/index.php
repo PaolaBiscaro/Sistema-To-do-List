@@ -6,6 +6,7 @@ require_once  $_SERVER['DOCUMENT_ROOT'] . "/controllers/PaginaController.php";
 
 $pagina = index();
 
+
 //  echo"<pre>";
 //  print_r($planos);
 // echo"</pre>";
