@@ -1,6 +1,8 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT']. "/helpers/Config.php";
     require_once $_SERVER['DOCUMENT_ROOT']. "/models/Pagina.php";
+
+    checarLogado();
  
 
     function index(){

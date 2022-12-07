@@ -14,9 +14,15 @@ $login = validarLogin();
 
                 <h3 class="text-center m-5">Acessar</h3>
 
+                <?php if(isset($_SESSION['mensagem'])): ?>
+
                 <div class="alert alert-danger text-center">
-                    Usuário ou senha inválido!
+                    <?=$_SESSION['mensagem']; ?>
+
+                    <?php unset($_SESSION['mensagem']); ?>
                 </div>
+
+                <?php endif; ?>
 
                 <form action="/login/index" method="post" class="row g-3">
                     <div class="col-12">

@@ -46,7 +46,16 @@
         </ul>
 
         <span class="sessao-usuario">
-            <a class="btn btn-primary" href="login.html">Entrar</a>
+          <?php if(isset($_SESSION['usuario'])):?>
+
+            <?= $_SESSION['usuario']['nome']; ?> | <a href = "/login/logout">Sair</a> 
+       
+          <?php else:?>
+
+            <a class="btn btn-primary" href="/login">Entrar</a>
+
+          <?php endif;?>
+
         </span>
       </div>
     </div>
