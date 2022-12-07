@@ -12,11 +12,6 @@ $pagina = index();
 // echo"</pre>";
 ?>
 
-
-
-
-
-
 <?php include_once CABECALHO; ?>
 
 <main class="container mt-5 mb-5">
